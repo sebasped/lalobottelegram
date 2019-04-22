@@ -50,7 +50,7 @@ def laloHabla(bot, update):
     bot.send_chat_action(chat_id=chat_id, action=telegram.ChatAction.TYPING)
     bot.send_message(chat_id=chat_id, text="Miaauuuuu")
     bot.send_chat_action(chat_id=chat_id, action=telegram.ChatAction.TYPING)
-    bot.send_voice(chat_id=chat_id, voice=open('/home/sebas/hacking/gits/telegramBot/catmiau.mp3', 'rb'))
+    bot.send_voice(chat_id=chat_id, voice=open('./catmiau.mp3', 'rb'))
 #    bot.send_audio(chat_id=chat_id, audio=open('/home/sebas/hacking/gits/telegramBot/catmiau.mp3', 'rb'))
 #    pass
     
@@ -59,8 +59,9 @@ def laloEdad(bot, update):
     now = date.today()
     birthdate = date(2018, 1, 1)
     rdelta = relativedelta(now, birthdate)
+    rdeltaGato = rdelta*7
     bla = 'Soy Lalo y tengo '+str(rdelta.years)+' año, '+str(rdelta.months)+' meses y '+str(rdelta.days)+u' días'
-    
+    bot.send_chat_action(chat_id=chat_id, action=telegram.ChatAction.TYPING)    
     bot.send_message(chat_id=chat_id, text=bla)
     #print 'Age in days - ', rdelta.days
     
