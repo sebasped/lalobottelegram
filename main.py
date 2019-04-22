@@ -57,10 +57,10 @@ def laloHabla(bot, update):
 def laloEdad(bot, update):
     chat_id = update.message.chat_id
     now = date.today()
-    birthdate = date(2018, 1, 1)
+    birthdate = date(2018, 1, 15)
     rdelta = relativedelta(now, birthdate)
     rdeltaGato = rdelta*7
-    bla = 'Soy Lalo y tengo '+str(rdelta.years)+' año, '+str(rdelta.months)+' meses y '+str(rdelta.days)+u' días'
+    bla = 'Soy Lalo y tengo '+str(rdelta.years)+' año, '+str(rdelta.months)+' meses y '+str(rdelta.days)+u' días. Pero en edad de gato tengo '+str(rdeltaGato.years)+' años, '+str(rdeltaGato.months)+' meses y '+str(rdeltaGato.days)+u' días.'
     bot.send_chat_action(chat_id=chat_id, action=telegram.ChatAction.TYPING)    
     bot.send_message(chat_id=chat_id, text=bla)
     #print 'Age in days - ', rdelta.days
